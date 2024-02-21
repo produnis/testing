@@ -1,0 +1,30 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this blog"
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "# aktivate Dataset\ndata(\"anscombe\")\n# prepare data\nGruppe1 &lt;- data.frame(x=anscombe$x1, y=anscombe$y1)\nGruppe2 &lt;- data.frame(x=anscombe$x2, y=anscombe$y2)\nGruppe3 &lt;- data.frame(x=anscombe$x3, y=anscombe$y3)\nGruppe4 &lt;- data.frame(x=anscombe$x4, y=anscombe$y4)\n\nThese should not be the preview-pic(s)\nplot(Gruppe1$x,Gruppe1$y,\n     xlim = c(0,20),\n     ylim = c(0,13))\nabline(lm(Gruppe1$y~Gruppe1$x))\n\n\nplot(Gruppe2$x,Gruppe2$y,\n     xlim = c(0,20),\n     ylim = c(0,13))\nabline(lm(Gruppe2$y~Gruppe2$x))\n\n\nplot(Gruppe3$x,Gruppe3$y,\n     xlim = c(0,20),\n     ylim = c(0,13))\nabline(lm(Gruppe3$y~Gruppe3$x))\n\n\nplot(Gruppe4$x,Gruppe4$y,\n     xlim = c(0,20),\n     ylim = c(0,13))\nabline(lm(Gruppe4$y~Gruppe4$x))\n\n\n\n\n\n\n\n\n\n\n\n(a) Gruppe 1\n\n\n\n\n\n\n\n\n\n\n\n(b) Gruppe 2\n\n\n\n\n\n\n\n\n\n\n\n\n\n(c) Gruppe 3\n\n\n\n\n\n\n\n\n\n\n\n(d) Gruppe 4\n\n\n\n\n\n\n\nFigure 1: Anscombe Quartett\n\n\n\nTHIS should be the preview-pic instead\n\nlibrary(ggplot2)\nload(url(\"https://www.produnis.de/nagut/datasaurus.RData\"))\n\ndatasaurus |&gt; \n  ggplot(aes(x=x, y=y)) +\n  geom_point() +\n  facet_wrap(~dataset)\n\n\n\n\n\n\n\nFigure 2"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Testblog",
+    "section": "",
+    "text": "Post With Code\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nFeb 21, 2024\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nFeb 18, 2024\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/post-with-code/index.html",
+    "href": "posts/post-with-code/index.html",
+    "title": "Post With Code",
+    "section": "",
+    "text": "This is a post with executable code."
+  }
+]

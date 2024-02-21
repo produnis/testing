@@ -1,0 +1,17 @@
+{
+  "hash": "3462ca18c71a978391abe00d127d5245",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Welcome To My Blog\"\nauthor: \"Tristan O'Malley\"\ndate: \"2024-02-18\"\ncategories: [news]\n---\n\n::: {.cell}\n\n```{.r .cell-code}\n# aktivate Dataset\ndata(\"anscombe\")\n# prepare data\nGruppe1 <- data.frame(x=anscombe$x1, y=anscombe$y1)\nGruppe2 <- data.frame(x=anscombe$x2, y=anscombe$y2)\nGruppe3 <- data.frame(x=anscombe$x3, y=anscombe$y3)\nGruppe4 <- data.frame(x=anscombe$x4, y=anscombe$y4)\n```\n:::\n\n\nThese should **not** be the preview-pic(s)\n\n\n::: {#fig-AscombeQuartett .cell layout-ncol=\"2\"}\n\n```{.r .cell-code}\nplot(Gruppe1$x,Gruppe1$y,\n     xlim = c(0,20),\n     ylim = c(0,13))\nabline(lm(Gruppe1$y~Gruppe1$x))\n\n\nplot(Gruppe2$x,Gruppe2$y,\n     xlim = c(0,20),\n     ylim = c(0,13))\nabline(lm(Gruppe2$y~Gruppe2$x))\n\n\nplot(Gruppe3$x,Gruppe3$y,\n     xlim = c(0,20),\n     ylim = c(0,13))\nabline(lm(Gruppe3$y~Gruppe3$x))\n\n\nplot(Gruppe4$x,Gruppe4$y,\n     xlim = c(0,20),\n     ylim = c(0,13))\nabline(lm(Gruppe4$y~Gruppe4$x))\n```\n\n::: {.cell-output-display}\n![Gruppe 1](index_files/figure-html/fig-AscombeQuartett-1.png){#fig-AscombeQuartett-1 width=672}\n:::\n\n::: {.cell-output-display}\n![Gruppe 2](index_files/figure-html/fig-AscombeQuartett-2.png){#fig-AscombeQuartett-2 width=672}\n:::\n\n::: {.cell-output-display}\n![Gruppe 3](index_files/figure-html/fig-AscombeQuartett-3.png){#fig-AscombeQuartett-3 width=672}\n:::\n\n::: {.cell-output-display}\n![Gruppe 4](index_files/figure-html/fig-AscombeQuartett-4.png){#fig-AscombeQuartett-4 width=672}\n:::\n\nAnscombe Quartett\n:::\n\n\n\n\n\n**THIS** should be the preview-pic instead\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(ggplot2)\nload(url(\"https://www.produnis.de/nagut/datasaurus.RData\"))\n\ndatasaurus |> \n  ggplot(aes(x=x, y=y)) +\n  geom_point() +\n  facet_wrap(~dataset)\n```\n\n::: {.cell-output-display}\n![](index_files/figure-html/fig-datasaurus-1.png){#fig-datasaurus width=768}\n:::\n:::\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

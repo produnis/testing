@@ -1,0 +1,73 @@
+---
+title: "Welcome To My Blog"
+author: "Tristan O'Malley"
+date: "2024-02-18"
+categories: [news]
+---
+
+
+```{r}
+# aktivate Dataset
+data("anscombe")
+# prepare data
+Gruppe1 <- data.frame(x=anscombe$x1, y=anscombe$y1)
+Gruppe2 <- data.frame(x=anscombe$x2, y=anscombe$y2)
+Gruppe3 <- data.frame(x=anscombe$x3, y=anscombe$y3)
+Gruppe4 <- data.frame(x=anscombe$x4, y=anscombe$y4)
+```
+
+These should **not** be the preview-pic(s)
+
+```{r}
+#| label: fig-AscombeQuartett
+#| fig-cap: "Anscombe Quartett"
+#| fig-subcap: 
+#|   - "Gruppe 1"
+#|   - "Gruppe 2"
+#|   - "Gruppe 3"
+#|   - "Gruppe 4"
+#| layout-ncol: 2
+
+plot(Gruppe1$x,Gruppe1$y,
+     xlim = c(0,20),
+     ylim = c(0,13))
+abline(lm(Gruppe1$y~Gruppe1$x))
+
+
+plot(Gruppe2$x,Gruppe2$y,
+     xlim = c(0,20),
+     ylim = c(0,13))
+abline(lm(Gruppe2$y~Gruppe2$x))
+
+
+plot(Gruppe3$x,Gruppe3$y,
+     xlim = c(0,20),
+     ylim = c(0,13))
+abline(lm(Gruppe3$y~Gruppe3$x))
+
+
+plot(Gruppe4$x,Gruppe4$y,
+     xlim = c(0,20),
+     ylim = c(0,13))
+abline(lm(Gruppe4$y~Gruppe4$x))
+```
+
+
+
+
+**THIS** should be the preview-pic instead
+
+```{r}
+#| label: fig-datasaurus
+#| class-output: preview-image
+#| fig-width: 8
+#| fig-height: 8
+library(ggplot2)
+load(url("https://www.produnis.de/nagut/datasaurus.RData"))
+
+datasaurus |> 
+  ggplot(aes(x=x, y=y)) +
+  geom_point() +
+  facet_wrap(~dataset)
+```
+
